@@ -1,0 +1,116 @@
+my second name is cheptoo
+git log gives all the command 
+USER@DESKTOP-6MQFUF9 MINGW64 ~
+$ pwd
+/c/Users/USER
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~
+$ cd desktop
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop
+$ cd gitp
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp
+$ git delete
+git: 'delete' is not a git command. See 'git --help'.
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp
+$ git --delete
+unknown option: --delete
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp
+$ pwd
+cd 
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp
+$ git init
+Initialized empty Git repository in C:/Users/USER/Desktop/gitp/.git/
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git add .
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   gittp.txt
+
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git commit -m "added the first file"
+[main (root-commit) ca8265b] added the first file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gittp.txt
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitt1.txt
+        gitt2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git add gitt1
+fatal: pathspec 'gitt1' did not match any files
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git add gitt1.txt
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git commit -m "added the second file"
+[main 17be6bc] added the second file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gitt1.txt
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitt2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git log
+commit 17be6bc01e47fab63408c552fd974ad8ed9cab84 (HEAD -> main)
+Author: cynthia <cynthiachptoo@gmail.com>
+Date:   Tue Jun 28 12:18:29 2022 +0300
+
+    added the second file
+
+commit ca8265b3606fcf26cb1fc60fcee892c7d03ea795
+Author: cynthia <cynthiachptoo@gmail.com>
+Date:   Tue Jun 28 12:01:58 2022 +0300
+
+    added the first file
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$ git log --author "cynthia"
+commit 17be6bc01e47fab63408c552fd974ad8ed9cab84 (HEAD -> main)
+Author: cynthia <cynthiachptoo@gmail.com>
+Date:   Tue Jun 28 12:18:29 2022 +0300
+
+    added the second file
+
+commit ca8265b3606fcf26cb1fc60fcee892c7d03ea795
+Author: cynthia <cynthiachptoo@gmail.com>
+Date:   Tue Jun 28 12:01:58 2022 +0300
+
+    added the first file
+
+USER@DESKTOP-6MQFUF9 MINGW64 ~/desktop/gitp (main)
+$
